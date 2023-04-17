@@ -1,0 +1,54 @@
+{
+  "name": "prototypical-node-app",
+  "version": "0.0.1",
+  "description": "Prototypical Node app using Typescript",
+  "author": "Keiron McCammon",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/onehanded/prototypical-node-app.git"
+  },
+  "bugs": {
+    "url": "https://github.com/onehanded/prototypical-node-app/issues"
+  },
+  "homepage": "https://github.com/onehanded/prototypical-node-app#readme",
+  "bin": {
+    "app": "bin/app"
+  },
+  "engines": {
+    "node": ">=18.0.0"
+  },
+  "main": "build/app.js",
+  "files": [
+    "bin",
+    "build",
+    "LICENSE"
+  ],
+  "scripts": {
+    "dev": "NODE_ENV=development && gulp && node build/app.js",
+    "clean": "rm -rf build",
+    "build": "npm run clean && gulp",
+    "lint": "eslint",
+    "test": "jest",
+    "prepare": "husky install"
+  },
+  "devDependencies": {
+    "@types/gulp": "^4.0.10",
+    "@types/jest": "^29.5.0",
+    "@types/node": "^18.15.11",
+    "@typescript-eslint/eslint-plugin": "^5.59.0",
+    "@typescript-eslint/parser": "^5.59.0",
+    "eslint": "^8.38.0",
+    "eslint-config-prettier": "^8.8.0",
+    "eslint-plugin-notice": "^0.9.10",
+    "gulp": "^4.0.2",
+    "gulp-typescript": "^6.0.0-alpha.1",
+    "husky": "^8.0.3",
+    "jest": "^29.5.0",
+    "lint-staged": "^13.2.1",
+    "prettier": "^2.8.7",
+    "ts-jest": "^29.1.0",
+    "ts-node": "^10.9.1",
+    "typescript": "^5.0.4"
+  }
+}

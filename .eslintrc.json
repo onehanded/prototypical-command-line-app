@@ -1,0 +1,28 @@
+{
+  "extends": [
+    "eslint:recommended",
+    "plugin:@typescript-eslint/recommended",
+    "prettier"
+  ],
+  "parser": "@typescript-eslint/parser",
+  "plugins": ["@typescript-eslint", "notice"],
+  "root": true,
+  "overrides": [
+    {
+      "files": ["src/**/*.ts"],
+      "rules": {
+        "notice/notice": [
+          "error",
+          {
+            "mustMatch": "Copyright \\(c\\) [0-9]{4} One Handed Ventures, LLC",
+            "templateFile": "copyright.ts",
+            "onNonMatchingHeader": "replace",
+            "messages": {
+              "whenFailedToMatch": "Couldn't find copyright notice, are you sure you added it?"
+            }
+          }
+        ]
+      }
+    }
+  ]
+}

@@ -1,13 +1,20 @@
 /*
  * Copyright (c) 2023 One Handed Ventures, LLC
  */
+import {Command} from 'commander';
 
-/**
- * @file app.ts
- * @description The main entry point for the application.
- */
-export default function app() {
-  console.log('Hello, world!');
-}
+// Useful for debugging unhandled rejections.
+// See https://nodejs.org/api/process.html#process_event_unhandledrejection
+// for more information.
+//
+// process.on('unhandledRejection', (e) => {
+//   console.error(e);
+// });
 
-app();
+const program = new Command();
+
+program.version('0.0.1');
+
+program.parse(process.argv);
+
+console.log('Hello, world!');

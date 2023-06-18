@@ -1,17 +1,17 @@
 {
-  "name": "prototypical-node-app",
+  "name": "prototypical-command-line-app",
   "version": "0.0.1",
-  "description": "Prototypical Node app using Typescript",
+  "description": "Prototypical Command Line Interface Node app using Typescript",
   "author": "Keiron McCammon",
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/onehanded/prototypical-node-app.git"
+    "url": "git+https://github.com/onehanded/prototypical-command-line-app.git"
   },
   "bugs": {
-    "url": "https://github.com/onehanded/prototypical-node-app/issues"
+    "url": "https://github.com/onehanded/prototypical-command-line-app/issues"
   },
-  "homepage": "https://github.com/onehanded/prototypical-node-app#readme",
+  "homepage": "https://github.com/onehanded/prototypical-command-line-app#readme",
   "bin": {
     "app": "bin/app"
   },
@@ -25,7 +25,7 @@
     "LICENSE"
   ],
   "scripts": {
-    "dev": "NODE_ENV=development && gulp && node build/app.js",
+    "dev": "NODE_ENV=development && ts-node ./src/app.ts",
     "clean": "rm -rf build",
     "build": "npm run clean && gulp",
     "lint": "eslint",
@@ -33,12 +33,12 @@
     "prepare": "husky install"
   },
   "devDependencies": {
-    "@types/gulp": "^4.0.10",
-    "@types/jest": "^29.5.1",
-    "@types/node": "^20.1.5",
-    "@typescript-eslint/eslint-plugin": "^5.59.6",
-    "@typescript-eslint/parser": "^5.59.6",
-    "eslint": "^8.40.0",
+    "@types/gulp": "^4.0.11",
+    "@types/jest": "^29.5.2",
+    "@types/node": "^20.3.1",
+    "@typescript-eslint/eslint-plugin": "^5.59.11",
+    "@typescript-eslint/parser": "^5.59.11",
+    "eslint": "^8.43.0",
     "eslint-config-prettier": "^8.8.0",
     "eslint-plugin-notice": "^0.9.10",
     "gulp": "^4.0.2",
@@ -49,9 +49,9 @@
     "prettier": "^2.8.8",
     "ts-jest": "^29.1.0",
     "ts-node": "^10.9.1",
-    "typescript": "^5.0.4"
+    "typescript": "^5.1.3"
   },
   "dependencies": {
-    "commander": "^10.0.1"
+    "commander": "^11.0.0"
   }
 }
